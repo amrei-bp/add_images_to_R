@@ -221,5 +221,5 @@ We can also use the output from `rasterGrob` to place plots side by side:
 ```{r patchwork_side_by_side}
 bill_len_dep + img_grob
 ```
-
+More on using `patchwork` to insert images to ggplot plots can be found [here](https://patchwork.data-imaginist.com/reference/inset_element.html#arguments). 
 :::

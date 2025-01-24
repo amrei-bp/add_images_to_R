@@ -11,28 +11,6 @@
     ]
   },
   {
-    "objectID": "quarto_maps.html",
-    "href": "quarto_maps.html",
-    "title": "",
-    "section": "",
-    "text": "CodeShow All CodeHide All CodeView Source\n\n\n\n\nWith the leaflet package, it is easy to include an interactive map into a quarto document.\n\n\nClick here to show the code\npacman::p_load(here, leaflet)\nhere::i_am(\"images_in_R_plots.qmd\")\n\n\n\nFirst map\nThis example is taken from their documentation.\n\n\nClick here to show the code\nm &lt;- leaflet()\nm &lt;- addTiles(m)\nm &lt;- addMarkers(m, lng=174.768, lat=-36.852, popup=\"The birthplace of R\")\nm\n\n\n\n\n\n\n\n\nLet’s find SLU on the map\nFirst we render a map of the entire world.\n\n\nClick here to show the code\nlibrary(leaflet)\nm &lt;- leaflet() %&gt;% addTiles()\nm  # a map with the default OSM tile layer\n\n\n\n\n\n\nThen we hone in on Sweden. The coordinates here are in the format (longitude east, latitude south, longitude west, latitude north).\n\n\nClick here to show the code\nm %&gt;% fitBounds(15, 55, 17, 70)\n\n\n\n\n\n\nLet’s find Uppsala - rough coordinates taken from the web, the rest is try-and-error. I am sure there is a better way to do this.\n\n\nClick here to show the code\nm %&gt;% fitBounds(17.6, 59.78, 17.67, 59.9)\n\n\n\n\n\n\nAnd once we have found the campus we can add a marker.\n\n\nClick here to show the code\nm %&gt;% fitBounds(17.6542, 59.812, 17.6543, 59.819)\n\n\n\n\n\n\nClick here to show the code\nm %&gt;% addMarkers(m, lng=17.6543, lat=59.816, popup=\"SLU campus\n\")",
-    "crumbs": [
-      "maps in quarto",
-      "First map"
-    ]
-  },
-  {
-    "objectID": "interactive_graphs.html",
-    "href": "interactive_graphs.html",
-    "title": "",
-    "section": "",
-    "text": "Code\n\n\n\n\n\nOnline gallery of interactive graphs\nHere is a nice gallery of interactive graphs in R.",
-    "crumbs": [
-      "interactive graphs",
-      "Online gallery of interactive graphs"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "",
@@ -110,6 +88,39 @@
     "text": "Pull the changes to your local repository\n\nin Rstudio, click the pull button (downward arrow) in the git tab to pull the changes into your local directory",
     "crumbs": [
       "How to contribute"
+    ]
+  },
+  {
+    "objectID": "interactive_graphs.html",
+    "href": "interactive_graphs.html",
+    "title": "",
+    "section": "",
+    "text": "Code\n\n\n\n\n\nOnline gallery of interactive graphs\nHere is a nice gallery of interactive graphs in R.",
+    "crumbs": [
+      "interactive graphs",
+      "Online gallery of interactive graphs"
+    ]
+  },
+  {
+    "objectID": "quarto_maps.html",
+    "href": "quarto_maps.html",
+    "title": "",
+    "section": "",
+    "text": "CodeShow All CodeHide All CodeView Source\n\n\n\n\nWith the leaflet package, it is easy to include an interactive map into a quarto document.\n\n\nClick here to show the code\npacman::p_load(here, leaflet)\nhere::i_am(\"images_in_R_plots.qmd\")\n\n\n\nFirst map\nThis example is taken from their documentation.\n\n\nClick here to show the code\nm &lt;- leaflet()\nm &lt;- addTiles(m)\nm &lt;- addMarkers(m, lng=174.768, lat=-36.852, popup=\"The birthplace of R\")\nm\n\n\n\n\n\n\n\n\nLet’s find SLU on the map\nFirst we render a map of the entire world.\n\n\nClick here to show the code\nlibrary(leaflet)\nm &lt;- leaflet() %&gt;% addTiles()\nm  # a map with the default OSM tile layer\n\n\n\n\n\n\nThen we hone in on Sweden. The coordinates here are in the format (longitude east, latitude south, longitude west, latitude north).\n\n\nClick here to show the code\nm %&gt;% fitBounds(15, 55, 17, 70)\n\n\n\n\n\n\nLet’s find Uppsala - rough coordinates taken from the web, the rest is try-and-error. I am sure there is a better way to do this.\n\n\nClick here to show the code\nm %&gt;% fitBounds(17.6, 59.78, 17.67, 59.9)\n\n\n\n\n\n\nAnd once we have found the campus we can add a marker.\n\n\nClick here to show the code\nm %&gt;% fitBounds(17.6542, 59.812, 17.6543, 59.819)\n\n\n\n\n\n\nClick here to show the code\nm %&gt;% addMarkers(m, lng=17.6543, lat=59.816, popup=\"SLU campus\n\")",
+    "crumbs": [
+      "maps in quarto",
+      "First map"
+    ]
+  },
+  {
+    "objectID": "genome_visualization.html",
+    "href": "genome_visualization.html",
+    "title": "",
+    "section": "",
+    "text": "Code\n\n\n\n\n\nAwesome genome visialization\nAnd here you can find some resources on how to visualize your genome data with R (and other languages).",
+    "crumbs": [
+      "genome visualization",
+      "Awesome genome visialization"
     ]
   }
 ]

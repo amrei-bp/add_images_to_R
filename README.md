@@ -1,2 +1,3 @@
-# add_images_to_R
-Here I show multiple ways to add images to plots in R
+# advanced illustrations in R
+
+A selection of different more fancy things one can do with illustrations in R. 

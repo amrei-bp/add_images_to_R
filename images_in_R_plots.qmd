@@ -1,11 +1,4 @@
----
-title: "How to add images to R plots"
-author: Amrei 
-format:
-  html:
-    include-in-header:
-      - file: github-corner.html
----
+
 
 # Pre-requisites:
 
@@ -24,7 +17,7 @@ pacman::p_load(here, tidyverse, ggimage, palmerpenguins, dplyr, ggpattern, patch
 here::i_am("images_in_R_plots.qmd")
 ```
 
-# Image in R plot
+# Add an image in R plot
 
 Here I want to show you how to add images to your plot.  There are different ways to do this, depedning on what you would like to achieve. 
 
@@ -185,7 +178,7 @@ With the function `rasterGrob` from the `grid` package we can transform this r o
 We can then use `patchwork`'s ìnset_element()`function to place the image into the plot. 
 
 
-```{r patchwork}
+```{r patchwork, warning= FALSE}
 
 img <- readPNG("penguin_logo.png")
 
@@ -203,7 +196,6 @@ bill_len_dep <- ggplot(data = penguins,
   geom_smooth(method = "lm", se = FALSE, aes(color = species)) +
   scale_color_manual(values = c("darkorange","purple","cyan4")) +
   labs(title = "Penguin bill dimensions",
-       subtitle = "Bill length and depth for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
        x = "Bill length (mm)",
        y = "Bill depth (mm)",
        color = "Penguin species",
@@ -218,7 +210,7 @@ bill_len_dep + inset_element(img_grob, 0.6, 0.6, 1, 1)
 
 We can also use the output from `rasterGrob` to place plots side by side: 
 
-```{r patchwork_side_by_side}
+```{r patchwork_side_by_side, warning=FALSE}
 bill_len_dep + img_grob
 ```
 More on using `patchwork` to insert images to ggplot plots can be found [here](https://patchwork.data-imaginist.com/reference/inset_element.html#arguments). 

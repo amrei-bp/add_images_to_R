@@ -15,98 +15,101 @@
     "href": "quarto_maps.html",
     "title": "",
     "section": "",
-    "text": "Code",
+    "text": "CodeShow All CodeHide All CodeView Source\n\n\n\n\nWith the leaflet package, it is easy to include an interactive map into a quarto document.\n\n\nClick here to show the code\npacman::p_load(here, leaflet)\nhere::i_am(\"images_in_R_plots.qmd\")\n\n\n\nFirst map\nThis example is taken from their documentation.\n\n\nClick here to show the code\n# Load the library.\nlibrary(leaflet)\n\n# Make a map\nleaflet() %&gt;%\n  addTiles() %&gt;% # Add default OpenStreetMap map tiles\n  addMarkers(lng = 174.768, lat = -36.852, popup = \"The birthplace of R\")\n\n\n\n\n\n\nHere is an alternative way to achieve the same thing, without using pipes in the code:\n\n\nClick here to show the code\nm &lt;- leaflet()\nm &lt;- addTiles(m)\nm &lt;- addMarkers(m, lng=174.768, lat=-36.852, popup=\"The birthplace of R\")\nm\n\n\n\n\n\n\n\n\nLet’s find SLU on the map\n\n\nClick here to show the code\nlibrary(leaflet)\nm &lt;- leaflet() %&gt;% addTiles()\nm  # a map with the default OSM tile layer\n\n\n\n\n\n\n\n\nClick here to show the code\nm %&gt;% fitBounds(0, 62, 1, 15)",
     "crumbs": [
       "maps in quarto",
-      "quarto_maps.html"
+      "First map"
     ]
   },
   {
-    "objectID": "landing.html",
-    "href": "landing.html",
+    "objectID": "interactive_graphs.html",
+    "href": "interactive_graphs.html",
+    "title": "",
+    "section": "",
+    "text": "Code\n\n\n\n\nHere is a nice gallery of interactive graphs in R.",
+    "crumbs": [
+      "interactive graphs",
+      "interactive_graphs.html"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "",
     "section": "",
     "text": "Code",
     "crumbs": [
-      "Intro",
-      "Advanced plots in R"
+      "How to contribute"
     ]
   },
   {
-    "objectID": "landing.html#fork-this-repository",
-    "href": "landing.html#fork-this-repository",
+    "objectID": "index.html#fork-this-repository",
+    "href": "index.html#fork-this-repository",
     "title": "",
     "section": "Fork this repository",
     "text": "Fork this repository\n\nclick the waving octocat in the top right corner, she will bring you to the repository on Github.\nfork this repository into your own account (click in the fork/triton symbol that says “fork”, and follow the instructions).",
     "crumbs": [
-      "Intro",
-      "Advanced plots in R"
+      "How to contribute"
     ]
   },
   {
-    "objectID": "landing.html#clone-your-copy-to-the-local-computer",
-    "href": "landing.html#clone-your-copy-to-the-local-computer",
+    "objectID": "index.html#clone-your-copy-to-the-local-computer",
+    "href": "index.html#clone-your-copy-to-the-local-computer",
     "title": "",
     "section": "Clone your copy to the local computer",
     "text": "Clone your copy to the local computer\n\nclone the repository to your local computer (click on the green “Code” button, choose “local” and “SSH”, then enter the copied url to a new project in Rstudio).",
     "crumbs": [
-      "Intro",
-      "Advanced plots in R"
+      "How to contribute"
     ]
   },
   {
-    "objectID": "landing.html#add-the-part-you-want-to-add",
-    "href": "landing.html#add-the-part-you-want-to-add",
+    "objectID": "index.html#add-the-part-you-want-to-add",
+    "href": "index.html#add-the-part-you-want-to-add",
     "title": "",
     "section": "Add the part you want to add",
     "text": "Add the part you want to add\n\nadd a new .qmd file with a descriptive name\nadd the .qmd file to the _quuarto.yml file\nmake changes to the .qmd file\ntest the render of the homepage\nstage the changes, commit them, push them to Github.",
     "crumbs": [
-      "Intro",
-      "Advanced plots in R"
+      "How to contribute"
     ]
   },
   {
-    "objectID": "landing.html#make-a-pull-request",
-    "href": "landing.html#make-a-pull-request",
+    "objectID": "index.html#make-a-pull-request",
+    "href": "index.html#make-a-pull-request",
     "title": "",
     "section": "Make a pull request",
     "text": "Make a pull request\nThis is to ask me to add your code to the repository.\n\nclick on “Contribute”\nclick on “Open pull request”\ntowards the top there will be a section “Compare changes” that says “Choose two branches to see what’s changed or to start a new pull request.”\non the left, choose the amrei-bp repository, and change the “base” to “new_features”\nfill in the information about your new feature and\n“Create pull request”",
     "crumbs": [
-      "Intro",
-      "Advanced plots in R"
+      "How to contribute"
     ]
   },
   {
-    "objectID": "landing.html#wait-for-me-to-give-you-feedback-or-approve-your-changes",
-    "href": "landing.html#wait-for-me-to-give-you-feedback-or-approve-your-changes",
+    "objectID": "index.html#wait-for-me-to-give-you-feedback-or-approve-your-changes",
+    "href": "index.html#wait-for-me-to-give-you-feedback-or-approve-your-changes",
     "title": "",
     "section": "Wait for me to give you feedback or approve your changes",
     "text": "Wait for me to give you feedback or approve your changes\n\nyou will get a message in your e-mail when I do",
     "crumbs": [
-      "Intro",
-      "Advanced plots in R"
+      "How to contribute"
     ]
   },
   {
-    "objectID": "landing.html#sync-your-fork",
-    "href": "landing.html#sync-your-fork",
+    "objectID": "index.html#sync-your-fork",
+    "href": "index.html#sync-your-fork",
     "title": "",
     "section": "Sync your fork",
     "text": "Sync your fork\nMake sure you copy of my repository is up to date.\n\nclick on “Sync fork”",
     "crumbs": [
-      "Intro",
-      "Advanced plots in R"
+      "How to contribute"
     ]
   },
   {
-    "objectID": "landing.html#pull-the-changes-to-your-local-repository",
-    "href": "landing.html#pull-the-changes-to-your-local-repository",
+    "objectID": "index.html#pull-the-changes-to-your-local-repository",
+    "href": "index.html#pull-the-changes-to-your-local-repository",
     "title": "",
     "section": "Pull the changes to your local repository",
     "text": "Pull the changes to your local repository\n\nin Rstudio, click the pull button (downward arrow) in the git tab to pull the changes into your local directory",
     "crumbs": [
-      "Intro",
-      "Advanced plots in R"
+      "How to contribute"
     ]
   }
 ]

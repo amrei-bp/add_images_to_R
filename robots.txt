@@ -1,1 +1,1 @@
-Sitemap: https://amrei-bp.github.io/add_images_to_R/sitemap.xml
+Sitemap: https://amrei-bp.github.io/advanced_illustrations_in_R/sitemap.xml

@@ -1,4 +1,4 @@
-With the [leaflet package](https://r-graph-gallery.com/package/leaflet.html), it is easy to include an interactive map into a quarto document.
+With the [leaflet package](https://r-graph-gallery.com/package/leaflet.html), it is relatively easy to include an interactive map into a quarto document. 
 
 ```{r package_load, message=FALSE}
 pacman::p_load(here, leaflet)

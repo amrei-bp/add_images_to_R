@@ -28,10 +28,22 @@ m <- leaflet() %>% addTiles()
 m  # a map with the default OSM tile layer
 ```
 
-            [32.958984, -5.353521], // [lng, lat] - southwestern corner of the bounds
-            [43.50585, 5.615985] // [lng, lat] - northeastern corner of the bounds
 Then we hone in on Sweden. The coordinates here are in the format `(longitude east, latitude south, longitude west, latitude north)`. 
 
 ```{r}
 m %>% fitBounds(15, 55, 17, 70)
+```
+
+Let's find Uppsala - rough coordinates taken from the web, the rest is try-and-error. I am sure there is a better way to do this. 
+
+```{r}
+m %>% fitBounds(17.6, 59.78, 17.67, 59.9)
+```
+
+And once we have found the campus we can add a marker. 
+
+```{r}
+m %>% fitBounds(17.6542, 59.812, 17.6543, 59.819)
+m %>% addMarkers(m, lng=17.6543, lat=59.816, popup="SLU campus
+")
 ```

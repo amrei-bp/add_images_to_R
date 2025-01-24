@@ -9,20 +9,6 @@ here::i_am("images_in_R_plots.qmd")
 
 This example is taken from their [documentation](https://rstudio.github.io/leaflet/articles/leaflet.html).
 
-```{r}
-#| column: screen
-#| out-width: 100%
-
-# Load the library.
-library(leaflet)
-
-# Make a map
-leaflet() %>%
-  addTiles() %>% # Add default OpenStreetMap map tiles
-  addMarkers(lng = 174.768, lat = -36.852, popup = "The birthplace of R")
-```
-
-Here is an alternative way to achieve the same thing, without using pipes in the code: 
 
 ```{r}
 m <- leaflet()
@@ -34,12 +20,18 @@ m
 
 # Let's find SLU on the map
 
+First we render a map of the entire world.
+
 ```{r}
 library(leaflet)
 m <- leaflet() %>% addTiles()
 m  # a map with the default OSM tile layer
 ```
 
+            [32.958984, -5.353521], // [lng, lat] - southwestern corner of the bounds
+            [43.50585, 5.615985] // [lng, lat] - northeastern corner of the bounds
+Then we hone in on Sweden. The coordinates here are in the format `(longitude east, latitude south, longitude west, latitude north)`. 
+
 ```{r}
-m %>% fitBounds(0, 62, 1, 15)
+m %>% fitBounds(15, 55, 17, 70)
 ```

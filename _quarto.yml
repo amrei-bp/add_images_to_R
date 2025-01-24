@@ -7,15 +7,17 @@ website:
     style: "docked"
     search: true
     contents:
-      - section: "Intro"
-        contents:
-          - href: landing.qmd
+      - text: "How to contribute"
+        href: index.qmd
       - section: "pngs in plots"
         contents:
           - images_in_R_plots.qmd
       - section: "maps in quarto"
         contents:
           - quarto_maps.qmd  
+      - section: "interactive graphs"
+        contents: 
+          - interactive_graphs.qmd
         
 
 format: 

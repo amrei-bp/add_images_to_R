@@ -9,6 +9,9 @@ website:
     contents:
       - text: "How to contribute"
         href: index.qmd
+      - section: "combine plots with patchwork"
+        contents:
+          - ggplot_patchwork.qmd
       - section: "pngs in plots"
         contents:
           - images_in_R_plots.qmd
@@ -29,7 +32,7 @@ format:
     code-summary: "Click here to show the code"
     code-tools: true
     theme: 
-      - spacelab
+      - solar
     self-contained: true
     page-layout: full
     toc: true

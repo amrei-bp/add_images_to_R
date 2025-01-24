@@ -18,6 +18,9 @@ website:
       - section: "interactive graphs"
         contents: 
           - interactive_graphs.qmd
+      - section: "genome visualization"
+        contents:
+          - genome_visualization.qmd
         
 
 format: 
